@@ -56,3 +56,25 @@ console.log({
 
 console.groupEnd('Triangulo')
 
+console.group('Circulo')
+
+const radioCirculo = 3;
+const diametroCirculo = radioCirculo * 2;
+const permimetroCirculo = 2 * Math.PI * radioCirculo;
+const areaCirculo = Math.PI * (radioCirculo**2);
+
+console.log({
+    radioCirculo,
+    diametroCirculo,
+    permimetroCirculo,
+    areaCirculo
+})
+
+function calcularCirculo (radio) {
+    return {
+        perimetro: 2 * Math.PI * radio,
+        area: (radio ** 2) * Math.PI
+    }
+}
+
+console.groupEnd('Circulo')
