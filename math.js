@@ -46,6 +46,24 @@ function calcularTrianguloHeron (lado1,lado2,base) {
     }
 }
 
+function calcularAlturaTrianguloIsosceles (lados,base){
+    if (lados == base){
+        console.warn('Este no es un triangulo isosceles')
+    } else {
+        return Math.sqrt((lado1 ** 2) - ((base ** 2)/4))
+    }
+}
+
+function calcularAlturaTrianguloEscaleno (lado1,lado2,base){
+    if (lado1 == lado2 || lado2 == base || lado1 == base){
+        console.warn('Este no es un triangulo Escaleno')
+    } else {
+        const S = (lado1 + lado2 + base) / 2
+        return (2/base) * Math.sqrt(((S) * (S - base) * (S - lado1) * (S - lado2)))
+    }
+
+}
+
 console.log({
     ladoTriangulo1,
     ladoTriangulo2,
