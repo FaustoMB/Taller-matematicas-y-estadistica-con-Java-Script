@@ -20,3 +20,24 @@ function calcularPromedio (lista){
     const average = sumaElementos / lista.length;
     return average
 }
+
+function esPar (lista){
+    return lista.length % 2 == 0
+}
+
+function calcularMediana (lista) {
+    const listaEsPar = esPar(lista)
+
+    if (listaEsPar){
+        const indexMitadListaPar1 = Math.floor(lista.length / 2);
+        const indexMitadListaPar2 = Math.floor(lista.length / 2) + 1;
+        const medianaListaPar = (indexMitadListaPar1 + indexMitadListaPar2) / 2;
+        console.log(medianaListaPar);
+        return medianaListaPar
+    }else {
+        const indexMitadListaImpar = Math.floor(lista.length / 2);
+        const medianaListaImpar = lista[indexMitadListaImpar];
+        console.log(medianaListaImpar);
+        return medianaListaImpar
+    }
+}
