@@ -29,9 +29,10 @@ function calcularMediana (lista) {
     const listaEsPar = esPar(lista)
 
     if (listaEsPar){
-        const indexMitadListaPar1 = Math.floor(lista.length / 2);
-        const indexMitadListaPar2 = Math.floor(lista.length / 2) + 1;
-        const medianaListaPar = (indexMitadListaPar1 + indexMitadListaPar2) / 2;
+        const indexMitadListaPar1 = (lista.length / 2);
+        console.log(indexMitadListaPar1);
+        const indexMitadListaPar2 = (lista.length / 2) - 1;
+        const medianaListaPar = (lista[indexMitadListaPar1] + lista[indexMitadListaPar2]) / 2;
         console.log(medianaListaPar);
         return medianaListaPar
     }else {
