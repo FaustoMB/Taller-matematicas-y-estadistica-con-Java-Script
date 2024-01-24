@@ -1,4 +1,7 @@
-function calcularPromedio (lista){
+const MathStatistics = {};
+
+
+MathStatistics.calcularPromedio = function calcularPromedio (lista){
     // const totalElementos = lista.length;
     // let sumaElementos = 0;
     // for (valor of lista){
@@ -21,11 +24,11 @@ function calcularPromedio (lista){
     return average
 }
 
-function esPar (lista){
+MathStatistics.esPar = function esPar (lista){
     return lista.length % 2 == 0
 }
 
-function calcularMediana (listaDesordenada) {
+MathStatistics.calcularMediana = function calcularMediana (listaDesordenada) {
     const lista = ordenarLista(listaDesordenada)
     const listaEsPar = esPar(lista)
 
@@ -44,7 +47,7 @@ function calcularMediana (listaDesordenada) {
     }
 }
 
-function ordenarLista (listaDesordenada){
+MathStatistics.ordenarLista = function ordenarLista (listaDesordenada){
     function ordenarListaSort (valorAcumulado, nuevoValor){
         // if (valorAcumulado > nuevoValor) {
         //     return 1;
@@ -62,7 +65,7 @@ function ordenarLista (listaDesordenada){
     return lista
 }
 
-function calcularModa (lista) {
+MathStatistics.calcularModa = function calcularModa (lista) {
     let listaCount = {};
     
     for (dato of lista){
@@ -82,7 +85,7 @@ function calcularModa (lista) {
     console.log({listaCount,listaArray,listaOrdenada,listaOrdenadaMaxNumber,moda,});
 }
 
-function ordenarListaBidimensional (listaDesordenada){
+MathStatistics.ordenarListaBidimensionalr = function ordenarListaBidimensional (listaDesordenada){
     function ordenarListaSort (valorAcumulado, nuevoValor){
 
         return valorAcumulado[1] - nuevoValor[1];
