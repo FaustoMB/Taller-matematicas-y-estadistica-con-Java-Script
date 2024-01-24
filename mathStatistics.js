@@ -29,20 +29,17 @@ MathStatistics.esPar = function esPar (lista){
 }
 
 MathStatistics.calcularMediana = function calcularMediana (listaDesordenada) {
-    const lista = ordenarLista(listaDesordenada)
-    const listaEsPar = esPar(lista)
+    const lista = MathStatistics.ordenarLista(listaDesordenada)
+    const listaEsPar = MathStatistics.esPar(lista)
 
     if (listaEsPar){
         const indexMitadListaPar1 = (lista.length / 2);
-        console.log(indexMitadListaPar1);
         const indexMitadListaPar2 = (lista.length / 2) - 1;
         const medianaListaPar = (lista[indexMitadListaPar1] + lista[indexMitadListaPar2]) / 2;
-        console.log(medianaListaPar);
         return medianaListaPar
     }else {
         const indexMitadListaImpar = Math.floor(lista.length / 2);
         const medianaListaImpar = lista[indexMitadListaImpar];
-        console.log(medianaListaImpar);
         return medianaListaImpar
     }
 }
