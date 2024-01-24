@@ -61,3 +61,18 @@ function ordenarLista (listaDesordenada){
     
     return lista
 }
+
+function calcularModa (lista) {
+    let listaCount = {};
+    
+    for (dato of lista){
+       
+        if (listaCount[dato]){
+            listaCount[dato] += 1;
+        } else {
+            listaCount[dato] = 1;
+        }
+    }
+
+    const listaArray = Object.entries(listaCount)
+}
