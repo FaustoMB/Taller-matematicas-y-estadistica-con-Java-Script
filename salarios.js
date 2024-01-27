@@ -1,3 +1,10 @@
+[]
+{
+  
+}
+
+
+
 const salarios = [];
 salarios.push({
   name: 'Juanita',

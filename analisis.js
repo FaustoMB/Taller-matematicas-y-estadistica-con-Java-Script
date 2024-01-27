@@ -15,7 +15,6 @@ function medianaPorPersona (nombrePersona){
     
     
     const medianaSalarios = MathStatistics.calcularMediana(salarios)
-    console.log(medianaSalarios);
     return medianaSalarios;
     
     // MathStatistic.calcularMediana(trabajos.find (sala))
@@ -31,7 +30,6 @@ function proyeccionPorPersona (nombrePersona){
         const salarioPasado = trabajos [i - 1].salario;
         const crecimiento = salarioActual - salarioPasado;
         const porcentajeCrecimiento = crecimiento / salarioPasado;
-        console.log(porcentajeCrecimiento);
         porcentajesCrecimiento.push(porcentajeCrecimiento)
     }
     
@@ -108,4 +106,30 @@ function proyeccionPorEmpresa(nombre){
 
         
     }
+}
+
+// Análisis General
+
+function medianaGeneral (){
+    const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
+    const medianaDePersonas = MathStatistics.calcularMediana(listaMedianas)
+    return medianaDePersonas
+}
+
+function medianaTop10(){
+    const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name));
+    
+
+    const medianasOrdenadas = MathStatistics.ordenarLista(listaMedianas)
+
+    const cantidad = listaMedianas.length / 10;
+
+    const limite = listaMedianas.length - cantidad;
+    
+    const top10 = medianasOrdenadas.slice(limite,medianasOrdenadas.length);
+    // const top10 = medianasOrdenadas.splice(limite,medianasOrdenadas.length);
+
+    const medianaTop10 = MathStatistics.calcularMediana(top10);
+    
+    console.log({medianaTop10});
 }
